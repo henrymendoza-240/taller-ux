@@ -2,7 +2,7 @@
  
 Formulario de inscripcion redisenado aplicando principios de UX/UI.
  
-Pagina publicada: https://henrymendoza-240.github.io/taller-ux/
+Pagina publicada: https://henrymendoza-240.github.io/taller-ux/docs/
  
 ## Cambios aplicados
  
