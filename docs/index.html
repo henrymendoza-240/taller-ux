@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de Notas Académicas - Rediseño UX/UI</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <main class="tarjeta">
+    <h1>Mis Notas Académicas</h1>
+    <p class="ayuda">Organiza tus tareas y recordatorios. Todos los campos marcados son obligatorios.</p>
+
+    <form id="formNotas" novalidate>
+      <fieldset>
+        <legend>1. Contenido de la nota</legend>
+        
+        <label for="titulo">Título de la nota</label>
+        <input id="titulo" type="text" placeholder="Ej. Repasar para el examen de Web" required autocomplete="off">
+
+        <label for="contenido">Descripción detallada</label>
+        <textarea id="contenido" rows="3" placeholder="Escribe los detalles aquí..." required></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>2. Categoría y Prioridad</legend>
+        
+        <label for="categoria">Categoría</label>
+        <select id="categoria" required>
+          <option value="">Selecciona una categoría</option>
+          <optgroup label="Cursos Tecsup">
+            <option value="Diseño Web">Diseño Web</option>
+            <option value="Base de Datos">Base de Datos</option>
+            <option value="Programación">Programación</option>
+          </optgroup>
+          <optgroup label="Personales">
+            <option value="Proyectos">Proyectos</option>
+            <option value="Recordatorios">Recordatorios</option>
+          </optgroup>
+        </select>
+
+        <label for="prioridad">Nivel de prioridad</label>
+        <select id="prioridad" required>
+          <option value="Baja">Baja</option>
+          <option value="Media" selected>Media</option>
+          <option value="Alta">Alta</option>
+        </select>
+      </fieldset>
+
+      <!-- Mensaje para visibilidad del estado -->
+      <p id="mensajeEstado" class="mensaje" role="status"></p>
+
+      <div class="acciones">
+        <button type="submit" class="boton-principal">Guardar nota</button>
+        <button type="reset" class="boton-secundario">Limpiar campos</button>
+      </div>
+    </form>
+
+    <section class="seccion-lista">
+      <h2>Lista de Notas</h2>
+      <ul id="listaNotas" class="lista-notas"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
